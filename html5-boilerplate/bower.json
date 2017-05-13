@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "homepage": "https://github.com/peterblazejewicz/dotnet-core-2-razor-pages",
+  "authors": [
+    "Peter Blazejewicz"
+  ],
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.0",
+    "modernizr": "^2.8.3",
+    "normalize-css": "^7.0.0"
+  }
+}
