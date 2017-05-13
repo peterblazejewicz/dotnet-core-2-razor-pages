@@ -37,6 +37,7 @@ namespace html5_boilerplate
             {
                 app.UseExceptionHandler("/Error");
             }
+            app.UseStatusCodePagesWithReExecute("/StatusCode/{0}");
 
             app.UseStaticFiles();
 
