@@ -1,0 +1,13 @@
+{
+  "name": "bootstrap4",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "keywords": [],
+  "author": "Peter Blazejewicz",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "jquery-validation": "^1.16.0",
+    "jquery-validation-unobtrusive": "^3.2.6"
+  }
+}
