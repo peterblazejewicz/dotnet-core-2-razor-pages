@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace html5_boilerplate.Pages
+namespace h5bp.Pages
 {
     public class ErrorModel : PageModel
     {

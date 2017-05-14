@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 
-namespace html5_boilerplate
+namespace h5bp
 {
     public class Startup
     {
@@ -40,7 +40,6 @@ namespace html5_boilerplate
             {
                 app.UseExceptionHandler("/Error");
             }
-            app.UseStatusCodePagesWithReExecute("/StatusCode/{0}");
 
             app.UseStaticFiles();
             app.UseStaticFiles(new StaticFileOptions()

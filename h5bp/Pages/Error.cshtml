@@ -1,32 +1,14 @@
 ﻿@page
-@model StatusCodeModel
+@model ErrorModel
 @{
-    var statusmessage = "";
-    switch (StatusCodeModel.statusCode)
-    {
-        case 400:
-            statusmessage = "Bad request: The request cannot be fulfilled due to bad syntax";
-            break;
-        case 403:
-            statusmessage = "Forbidden";
-            break;
-        case 404:
-            statusmessage = "Page not found";
-            break;
-        case 408:
-            statusmessage = "The server timed out waiting for the request";
-            break;
-        default:
-            statusmessage = "That’s odd... Something we didn't expect happened";
-            break;
-    }
+    ViewData["Title"] = "Error";
 }
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Page Not Found</title>
+    <title>Error Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
@@ -61,7 +43,7 @@
             width: 280px;
         }
 
-        @media only screen and (max-width: 280px) {
+        @@media only screen and (max-width: 280px) {
 
             body, p {
                 width: 95%;
@@ -77,8 +59,23 @@
     </style>
 </head>
 <body>
-    <h1>Error @Model</h1>
-    <h2>@statusmessage</h2>
+    <h1>Error.</h1>
+    <h2>An error occurred while processing your request.</h2>
+
+    @if (Model.ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+
+    <h3>Development Mode</h3>
+    <p>
+        Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+    </p>
+    <p>
+        <strong>Development environment should not be enabled in deployed applications</strong>, as it can result in sensitive information from exceptions being displayed to end users. For local debugging, development environment can be enabled by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>, and restarting the application.
+    </p>
 </body>
 </html>
 <!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->

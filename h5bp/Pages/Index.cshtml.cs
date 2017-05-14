@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace html5_boilerplate.Pages
+namespace h5bp.Pages
 {
     public class IndexModel : PageModel
     {
