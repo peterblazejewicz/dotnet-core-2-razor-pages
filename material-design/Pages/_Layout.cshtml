@@ -16,48 +16,49 @@
             asp-fallback-test-class="mdc-fab__icon" asp-fallback-test-property="display" asp-fallback-test-value="flex" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
-    <header class="mdc-toolbar mdc-toolbar--fixed">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <span class="catalog-logo">
-            <img src="/images/ic_component_24px_white.svg">
-          </span>
-          <!--<a href="#" class="material-icons">menu</a>-->
-          <span class="mdc-toolbar__title catalog-title">Material Components Catalog</span>
-        </section>
-      </div>
-    </header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">MaterialDesignSample</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                </ul>
-            </div>
+<body class="mdc-typography demo-body">
+    <div class="mdc-toolbar mdc-toolbar--fixed">
+        <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                <button class="demo-menu material-icons">menu</button>
+                <span class="mdc-toolbar__title catalog-title">MaterialDesignSample</span>
+            </section>
         </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - MaterialDesignSample</p>
-        </footer>
     </div>
 
+    <aside class="mdc-temporary-drawer">
+        <nav class="mdc-temporary-drawer__drawer">
+            <header class="mdc-temporary-drawer__header">
+                <div class="mdc-temporary-drawer__header-content mdc-theme--primary-bg mdc-theme--text-primary-on-primary">
+                    MaterialDesignSample
+                </div>
+            </header>
+            <nav class="mdc-temporary-drawer__content mdc-list-group">
+                <div id="icon-with-text-demo" class="mdc-list">
+                    <a asp-page="/Index" class="mdc-list-item mdc-temporary-drawer--selected">
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Home
+                    </a>
+                    <a asp-page="/Contact" class="mdc-list-item">
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>Contact
+                    </a>
+                </div>
+
+                <hr class="mdc-list-divider">
+
+                <div class="mdc-list">
+                    <a asp-page="/About" class="mdc-list-item">
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>About
+                    </a>
+            </nav>
+        </nav>
+    </aside>
+
+    @RenderBody()
+    
     <environment include="Development">
         <script src="~/lib/material-components-web/dist/css/material-components-web.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
