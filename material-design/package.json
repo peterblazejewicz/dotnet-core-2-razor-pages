@@ -1,0 +1,11 @@
+{
+  "name": "y",
+  "version": "y",
+  "description": "Sample of Razor Pages using Material Design Web Components",
+  "main": "index.js",
+  "author": "Peter Blazejewicz",
+  "license": "MIT",
+  "dependencies": {
+    "material-components-web": "^0.10.0"
+  }
+}

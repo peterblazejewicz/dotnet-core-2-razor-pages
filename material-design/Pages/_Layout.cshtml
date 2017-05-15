@@ -1,22 +1,35 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MaterialDesignSample</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/material-components-web/dist/css/material-components-web.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@0.10.0/dist/material-components-web.min.css"
+            integrity="sha384-IFkPQmRFyTBKrUvz3VU/J5Slt3DFkjWVke6xnDDrneTZYzngSQ8zM0cXESBFOV/t"
+            crossorigin="anonymous" asp-fallback-href="~/lib/material-components-web/dist/css/material-components-web.min.css"
+            asp-fallback-test-class="mdc-fab__icon" asp-fallback-test-property="display" asp-fallback-test-value="flex" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 </head>
 <body>
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <span class="catalog-logo">
+            <img src="/images/ic_component_24px_white.svg">
+          </span>
+          <!--<a href="#" class="material-icons">menu</a>-->
+          <span class="mdc-toolbar__title catalog-title">Material Components Catalog</span>
+        </section>
+      </div>
+    </header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -46,22 +59,15 @@
     </div>
 
     <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/material-components-web/dist/css/material-components-web.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
+        <script src="https://unpkg.com/material-components-web@0.10.0/dist/material-components-web.min.js"
+                asp-fallback-src="~/lib/material-components-web/dist/css/material-components-web.min.js"
+                asp-fallback-test="window.mdc"
                 crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+                integrity="sha384-D65tyVisQMkNTuGCyMgbXhjXti5DUxIUXYYKDPfOEf4/2dfe83xfQcBmcPUvEC6r">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
